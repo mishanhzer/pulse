@@ -30,7 +30,7 @@
             img {
                 display: block;
                 margin: 0 auto;
-                width: 450px;
+                width: 400px;
             }
         }
     }
@@ -59,6 +59,8 @@
         .footer__info {
             width: 445px;
             height: 250px;
+            left: 100%;
+            transform: translateX(-100%);
         }
     }
 }
@@ -264,6 +266,9 @@
     }
     .catalog {
         padding: 15px 15px 15px 15px;
+        .catalog__content {
+            justify-content: space-around;
+        }
     }
 }
 
@@ -282,11 +287,14 @@
         }
     }
     .header {
-        &__logo {
+        .header__logo {
             width: 180px;
         }
-        &__phone {
+        .header__phone {
                 font-size: 14px;
+        }
+        .header__official {
+            display: none;
         }
         
     }
@@ -349,7 +357,28 @@
             width: 500px;
            }
     }
-
+    section.consultation {
+        .title {
+            font-size: 17px;
+            line-height: 30px;
+        }
+    }
+    .footer {
+        .footer__info {
+            width: 230px;
+            height: 150px;
+            padding: 25px 10px 56px 10px;
+            .footer__social {
+                display: none;
+            }
+            .footer__address {
+                font-size: 13px;
+            }
+            .footer__phone {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 
@@ -366,15 +395,19 @@
         &__icons {
             margin-top: 20px;
         }
-    }
-    .header {
-        &__logo {
-            width: 180px;
+        .header {
+            .header__logo {
+                width: 180px;
+            }
+            &__official {
+               display: none;
+            }
+            &__contacts {
+                a {
+                    font-size: 14px;
+                }
+            }
         }
-        &__phone {
-                font-size: 14px;
-        }
-        
     }
 
     .button {
@@ -390,20 +423,20 @@
         font-size: 13px;
     }
 
-    .promo {
-        &__wrapper {
+    section.promo {
+        .promo__wrapper {
             margin-top: 50px;
         }
-        &__header {
+        .promo__header {
             font-size: 27px;
         }
-        &__subheader {
+        .promo__subheader {
             font-size: 18px;
         }
-        &__icons {
+        .promo__icons {
             width: 330px;
         }
-        &__icon {
+        .promo__icon {
             margin-top: 10px;
             font-size: 10px;
         }
@@ -425,15 +458,50 @@
             }
         }
         &__descr {
-            margin-top: 10px;
-            font-size: 11px;
-            line-height: 14px;
+           display: none;
         }
     }
     .carousel {
         .carousel__inner {
             width: 400px;
            }
+    }
+    section.consultation {
+        .title {
+            font-size: 17px;
+            line-height: 26px;
+        }
+        .consultation__descr {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    section.catalog {
+        .catalog__tabs {
+            .catalog__tab {
+                font-size: 12px;
+            }
+        }
+        .catalog-item {
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+    }
+    .footer {
+        .footer__info {
+            width: 160px;
+            height: 180px;
+            padding: 25px 10px 56px 10px;
+            .footer__social {
+                display: none;
+            }
+            .footer__address {
+                font-size: 13px;
+            }
+            .footer__phone {
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -594,17 +662,19 @@
        }
     }
  
-    .catalog {
+    section.catalog {
         padding-bottom: 70px;
         .title {
             font-size: 23px;
         }
+       .catalog__tabs {
         .catalog__tab {
             width: 100px;
             height: 40px;
             font-size: 10px;
             line-height: 40px;
         }
+       }
         .catalog__content {
             // height: 100px;
             .catalog-item {
@@ -671,22 +741,22 @@
         .footer__info {
             padding: 15px 30px 15px 30px;
             width: 180px;
-            height: 200px;
+            height: 140px;
             left: 100%;
             transform: translateX(-100%);
-        }
-        .footer__address {
-            font-size: 12px;
-        }
-        .footer__phone {
-            font-size: 14px;
-        }
-        .footer__social {
-            width: 120px;
-        }
-        .footer__social-item {
-            img {
-                width: 30px;
+            .footer__address {
+                font-size: 12px;
+            }
+            .footer__phone {
+                font-size: 14px;
+            }
+            .footer__social {
+                width: 120px;
+                .footer__social-item {
+                    img {
+                        width: 30px;
+                    }
+                }
             }
         }
     }
@@ -767,6 +837,12 @@
         padding: 15px 10px 15px 10px;
         width: 140px;
         height: 140px;
+        .footer__address {
+            font-size: 12px;
+        }
+        .footer__phone {
+            font-size: 14px;
+        }
         .footer__social {
             display: none;
         }
@@ -891,17 +967,19 @@
             width: 300px;
         }
     }
-    .catalog {
+    section.catalog {
         padding-bottom: 70px;
         .title {
             font-size: 21px;
         }
+      .catalog__tabs {
         .catalog__tab {
             width: 85px;
             height: 40px;
             font-size: 8px;
             line-height: 40px;
         }
+      }
     }
     .footer {
         .footer__info {
@@ -910,21 +988,16 @@
             height: 90px;
             left: 100%;
             transform: translateX(-100%);
-        }
-        .footer__address {
-            font-size: 10px;
-        }
-        .footer__phone {
-            margin-top: 10px;
-            font-size: 11px;
-        }
-        .footer__social {
-            display: none;
-            width: 120px;
-        }
-        .footer__social-item {
-            img {
-                width: 30px;
+            .footer__address {
+                font-size: 10px;
+            }
+            .footer__phone {
+                margin-top: 10px;
+                font-size: 11px;
+            }
+            .footer__social {
+                display: none;
+                width: 120px;
             }
         }
     }
